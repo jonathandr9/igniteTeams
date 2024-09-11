@@ -1,13 +1,21 @@
-import { Container, Logo } from './styles';
+import { Container, Logo, BackIcon, BackButton } from './styles';
 import logoImg from '@assets/logo.png';
-import { FontAwesome } from '@expo/vector-icons';
 
-export function Header() {
+type Props = {
+    showBackButton?: boolean;
+}
+
+export function Header({ showBackButton = false }: Props) {
 
     return (
         <Container>
-            <FontAwesome name="rocket" size={24} color="white" />
-            <Logo source={logoImg}/>
+            {
+                showBackButton &&
+                <BackButton>
+                    <BackIcon />
+                </BackButton>
+            }
+            <Logo source={logoImg} />
         </Container>
     )
 }
