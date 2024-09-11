@@ -4,19 +4,24 @@ module.exports = function (api) {
     presets: ['babel-preset-expo'],
     plugins: [
       [
-        "module-resolver",
+        'module-resolver',
         {
-          root: ["./src"],
+          root: ['./src'],
           alias: {
             '@assets': './src/assets',
             '@components': './src/components',
             '@routes': './src/routes',
             '@screens': './src/screens',
             '@storage': './src/storage',
-            '@utils': './src/utils'
-          }
-        }
-      ]
-    ]
+            '@utils': './src/utils',
+          },
+          modularizeImports: {
+            '@phosphor-icons/react': {
+              transform: '@phosphor-icons/react/dist/icons/{{member}}',
+            },
+          },
+        },
+      ],
+    ],
   };
 };
