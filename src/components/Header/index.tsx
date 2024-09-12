@@ -12,7 +12,7 @@ export function Header({ showBackButton = false }: Props) {
             {
                 showBackButton &&
                 <BackButton>
-                    <BackIcon />
+                    <BackIcon name="angle-left" />
                 </BackButton>
             }
             <Logo source={logoImg} />

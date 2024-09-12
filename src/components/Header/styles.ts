@@ -14,7 +14,6 @@ export const Logo = styled.Image`
 `
 
 export const BackIcon = styled(FontAwesome).attrs(({theme}) => ({
-    name: "angle-left",
     color: theme.COLORS.WHITE,
     size: 50
 })
